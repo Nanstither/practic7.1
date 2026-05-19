@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оценки студента и профиль </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main class="container">
+        <section class="table-section">
+            <table class="grades-table">
+                <caption style="margin-bottom: 24px;">Оценки студента за модули курса «Веб-разработка»</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Предмет</th>
+                        <th scope="col">Дата сдачи</th>
+                        <th scope="col">Оценка</th>
+                        <th scope="col">Комментарий преподавателя</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">HTML & CSS</td>
+                        <td>15 Января 2025</td>
+                        <td>95</td>
+                        <td>Отличная работа с семантикой</td>
+                    </tr>
+                    <tr>
+                        <td>22 Января 2025</td>
+                        <td>88</td>
+                        <td>Хорошо, но нужно улучшить адаптивность</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript Основы</td>
+                        <td>5 Февраля 2025</td>
+                        <td>92</td>
+                        <td>Чистый код, логика верная</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="section-divider">Промежуточный блок — Фреймворки</td>
+                        <td class="section-divider">—</td>
+                        <td class="section-divider">—</td>
+                    </tr>
+                    <tr>
+                        <td>React Базовый</td>
+                        <td>20 Февраля 2025</td>
+                        <td>90</td>
+                        <td>Компоненты структурированы правильно</td>
+                    </tr>
+                    <tr>
+                        <td>Vue Введение</td>
+                        <td>1 Марта 2025</td>
+                        <td>87</td>
+                        <td>Есть прогресс в понимании реактивности</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Средний балл</strong></td>
+                        <td><strong>90.4</strong></td>
+                        <td>Отличный результат!</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section class="form-section">
+            <h2>Редактирование профиля</h2>
+            <form action="#" method="POST" class="profile-form">
+                <div class="form-group">
+                    <label for="name">Имя <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" placeholder="Введите пароль">
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate">Дата рождения</label>
+                    <input type="date" id="birthdate" name="birthdate">
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Возраст</label>
+                    <input type="number" id="age" name="age" placeholder="Например: 25" min="16" max="100">
+                </div>
+
+                <div class="form-group">
+                    <label for="direction">Направление обучения</label>
+                    <select id="direction" name="direction">
+                        <option value="frontend">Frontend-разработка</option>
+                        <option value="backend" selected>Backend-разработка</option>
+                        <option value="fullstack">Fullstack-разработка</option>
+                        <option value="design">Веб-дизайн</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-group radio-group">
+                    <legend>Формат обучения</legend>
+                    <div class="radio-options">
+                        <label for="online">
+                            <input type="radio" id="online" name="format" value="online"> Онлайн
+                        </label>
+                        <label for="offline">
+                            <input type="radio" id="offline" name="format" value="offline"> Офлайн
+                        </label>
+                        <label for="hybrid">
+                            <input type="radio" id="hybrid" name="format" value="hybrid" checked> Гибрид
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group checkbox-group">
+                    <label for="agree-rules">
+                        <input type="checkbox" id="agree-rules" name="agreeRules" required>
+                        Я согласен с правилами обработки данных <span class="required">*</span>
+                    </label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label for="newsletter">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        Подписаться на рассылку новостей
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Комментарий или вопрос куратору</label>
+                    <textarea id="comment" name="comment" rows="4" placeholder="Напишите ваш вопрос или комментарий здесь..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Отправить</button>
+                    <button type="reset" class="btn-reset">Сброс</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

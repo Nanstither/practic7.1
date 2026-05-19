@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.table-section,
+.form-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1.5rem;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.grades-table th,
+.grades-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.grades-table thead th {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+}
+
+.grades-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.grades-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.grades-table tbody tr:hover {
+    background-color: #e8f4fc;
+    transition: background-color 0.2s ease;
+}
+
+.section-divider {
+    background-color: #ecf0f1 !important;
+    color: #7f8c8d;
+    font-style: italic;
+    text-align: center;
+}
+
+.grades-table tfoot td {
+    background-color: #2c3e50;
+    color: #fff;
+    font-weight: 500;
+    border-color: #34495e;
+}
+
+.table-section {
+    overflow-x: auto;
+}
+
+.profile-form {
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.required {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.radio-group {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    background: #fafafa;
+}
+
+.radio-group legend {
+    font-weight: 500;
+    color: #2c3e50;
+    padding: 0 6px;
+}
+
+.radio-options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.radio-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-submit,
+.btn-reset {
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background-color: #219a52;
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+.btn-reset {
+    background-color: #95a5a6;
+    color: #fff;
+}
+
+.btn-reset:hover {
+    background-color: #7f8c8d;
+}
+
+.btn-reset:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .table-section,
+    .form-section {
+        padding: 16px;
+    }
+
+    .grades-table th,
+    .grades-table td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .radio-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-submit,
+    .btn-reset {
+        width: 100%;
+    }
+}
